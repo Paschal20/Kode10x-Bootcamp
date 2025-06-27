@@ -80,7 +80,7 @@ body {
   border-radius: 5px;
   width: 400px;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
 }
 .name1::placeholder {
   font-size: 14px;
@@ -104,7 +104,7 @@ body {
   border-radius: 5px;
   width: 400px;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
   margin-bottom: 10px;
 }
 .inputHolder svg {
@@ -127,7 +127,7 @@ body {
   border-radius: 5px;
   width: 400px;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
 }
 .emailbox::placeholder {
   padding: 10px;

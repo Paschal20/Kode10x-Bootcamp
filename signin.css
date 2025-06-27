@@ -49,7 +49,7 @@ body {
 }
 .secondHeader {
   color: gray;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 14px;
 }
 .p {
@@ -57,9 +57,12 @@ body {
   color: gray;
   padding-left: 10px;
   background-color: white;
+  z-index: 2;
+  margin-bottom: -10px;
+  width: 30px;
 }
 .innerleft2 {
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .inputHolder input {
@@ -79,7 +82,7 @@ body {
   border-radius: 5px;
   width: 400px;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
   margin-bottom: 10px;
 }
 .inputHolder svg {
@@ -100,7 +103,7 @@ body {
   border-radius: 5px;
   width: 400px;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
 }
 .emailbox::placeholder {
   padding: 10px;
