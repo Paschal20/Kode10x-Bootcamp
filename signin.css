@@ -33,7 +33,7 @@ body {
   margin-left: 3%;
 }
 .logo span {
-  color: blue;
+  color: #323fa6;
 }
 .innerLeft {
   display: flex;
@@ -60,6 +60,7 @@ body {
   z-index: 2;
   margin-bottom: -10px;
   width: 30px;
+  padding-left: 10px;
 }
 
 .innerleft2 {
@@ -105,15 +106,17 @@ body {
   width: 400px;
   justify-content: space-between;
   height: 40px;
+  outline: none;
+  padding-left: 10px;
 }
 .emailbox::placeholder {
-  padding: 10px;
   font-size: 14px;
 }
 .name2 {
   margin-bottom: 10px;
   border: none;
   padding-left: 10px;
+  outline: none;
 }
 .passwordIcon {
   padding-right: 10px;
@@ -121,7 +124,7 @@ body {
 .signup {
   margin-top: 10px;
   width: 100%;
-  background-color: #367aff;
+  background-color: #323fa6;
   padding-top: 10px;
   padding-bottom: 10px;
   border-style: none;
@@ -149,4 +152,19 @@ body {
 }
 .textDiv span {
   padding-left: 10px;
+}
+.textDiv a {
+  color: #323fa6;
+  text-decoration: none;
+}
+
+.google {
+  text-decoration: none;
+  color: black;
+}
+.signup:hover {
+  cursor: pointer;
+}
+.logoanchor {
+  text-decoration: none;
 }

@@ -41,7 +41,7 @@ header {
   margin-left: 3%;
 }
 .logo span {
-  color: blue;
+  color: #323fa6;
 }
 
 header ul {
@@ -66,7 +66,7 @@ header ul li a {
   margin-right: 2.5%;
 }
 .signin {
-  background-color: blue;
+  background-color: #323fa6;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -109,7 +109,7 @@ h1 {
   width: 90%;
 }
 h1 span {
-  color: blue;
+  color: #323fa6;
 }
 p {
   font-size: 1rem;
@@ -129,11 +129,13 @@ p {
   width: 100%;
   margin-top: 50px;
   text-align: center;
-  background-color: #e5e7eba9;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
+}
+.keyFeatures span {
+  color: #323fa6;
 }
 h2 {
   font-size: 1.6rem;
@@ -142,13 +144,12 @@ h2 {
 }
 .keyFeatures h2 {
   margin-bottom: 40px;
-  margin-top: 40px;
 }
 .keyFeatures .cards {
   width: 98%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .keyFeatures .cards .card {
   width: 20%;
@@ -235,20 +236,38 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
 .testimonial h2 {
   margin-bottom: 40px;
 }
 .cardHolder {
   display: flex;
-  width: 70%;
+  width: 95%;
   justify-content: space-between;
 }
+.profile {
+  border: solid;
+  border-color: rgb(204, 201, 201);
+  border-width: 0.1px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
 .profile img {
-  width: 80px;
-  height: 80px;
+  width: 90%;
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 .testimonialTitle {
   margin-top: 40px;
+}
+.testimonialTitle span {
+  color: #323fa6;
 }
 
 .prompt {
@@ -273,12 +292,16 @@ h2 {
   border-style: solid;
   border-color: rgb(187, 186, 186);
 }
-.prompt input::placeholder {
-  padding: 10px;
-}
+
 .prompt button {
   margin-top: 16px;
   margin-bottom: 40px;
+}
+.prompt a {
+  text-decoration: none;
+}
+.prompt input {
+  padding-left: 10px;
 }
 footer {
   background-color: black;
