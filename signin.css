@@ -61,9 +61,7 @@ body {
 .innerleft2 {
   padding-top: 30px;
 }
-.nameHolder {
-  margin-bottom: 10px;
-}
+
 .inputHolder input {
   width: 90%;
   margin-top: 15px;
@@ -71,30 +69,7 @@ body {
 .inputHolder input::placeholder {
   font-size: 14px;
 }
-.name1 {
-  border: solid;
-  border-width: 0.2px;
-  border-color: grey;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  width: 400px;
-  justify-content: space-between;
-  height: 30px;
-}
-.name1::placeholder {
-  font-size: 14px;
-  padding-left: 10px;
-}
 
-.name {
-  margin-bottom: 16px;
-  border: none;
-}
-.dateHolder {
-  display: flex;
-  flex-direction: column;
-}
 .inputHolder {
   border: solid;
   border-width: 0.2px;
@@ -110,9 +85,7 @@ body {
 .inputHolder svg {
   padding-left: 10px;
 }
-.dateHolder {
-  margin-bottom: 10px;
-}
+
 .emailHolder {
   display: flex;
   flex-direction: column;
