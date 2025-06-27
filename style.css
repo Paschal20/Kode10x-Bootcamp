@@ -223,6 +223,21 @@ h2 {
 .targetAudience .left ul {
   margin-left: 15px;
 }
+
+.testimonial {
+  margin-top: 40px;
+  background-color: #e5e7eba9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardHolder {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+
 @media (max-width: 600px) {
   header svg {
     display: flex;
