@@ -218,10 +218,9 @@ body {
   display: flex;
   justify-content: center;
 }
-.textDiv span {
+
+.textDiv a {
   padding-left: 10px;
-}
-.textDiv span a {
   text-decoration: none;
   color: #323fa6;
 }
