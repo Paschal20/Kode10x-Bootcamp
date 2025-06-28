@@ -55,7 +55,7 @@ header {
 }
 .left {
   width: 15%;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 400px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -75,6 +75,7 @@ header {
 
 .profileHolder {
   display: flex;
+  align-items: center;
 }
 .profileHolder svg {
   margin-right: 10px;
