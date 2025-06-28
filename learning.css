@@ -159,6 +159,7 @@ header {
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 15px;
+  color: gray;
 }
 .downloadtag {
   text-decoration: none;
