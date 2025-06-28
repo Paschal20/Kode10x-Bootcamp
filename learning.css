@@ -79,6 +79,9 @@ header {
 .profileHolder svg {
   margin-right: 10px;
 }
+.profileHolder a {
+  color: #181818;
+}
 .nameAndEmail {
   font-size: 10px;
 }
