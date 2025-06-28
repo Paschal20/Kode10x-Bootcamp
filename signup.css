@@ -235,3 +235,8 @@ body {
 .logoanchor {
   text-decoration: none;
 }
+.date {
+  outline: none;
+  border: none;
+}
+

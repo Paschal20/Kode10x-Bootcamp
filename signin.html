@@ -27,13 +27,19 @@
             <p class="p">Email</p>
             <input
               class="emailbox"
+              id="email"
               type="email"
               placeholder="jonas_kahnwald@gmail.com"
               class="name"
             />
           </div>
           <div class="inputHolder">
-            <input type="text" placeholder="Password" class="name2" /><svg
+            <input
+              id="Password"
+              type="text"
+              placeholder="Password"
+              class="name2"
+            /><svg
               class="passwordIcon"
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -47,7 +53,7 @@
             </svg>
           </div>
           <a class="google" href="./"
-            ><button class="signup">Sign In</button></a
+            ><button onclick="signIn()" class="signup">Sign In</button></a
           >
 
           <hr />
@@ -67,5 +73,24 @@
     <div class="right">
       <img src="./Images/element5-digital-jCIMcOpFHig-unsplash.jpg" alt="" />
     </div>
+    <script>
+      function signIn() {
+        const password = document.getElementById("password").value;
+        const email = document.getElementById("email").value;
+        if (
+          password.trim()
+        ) {
+          const storedEmail = localStorage.getItem(email);
+          if (storedEmail) {
+            alert("Email address already exist, please try again");
+          } else {
+            localStorage.setItem(email, password);
+            window.localStorage.href = "signin.html";
+          }
+        } else {
+          alert("invalid email format");
+        }
+      }
+    </script>
   </body>
 </html>
