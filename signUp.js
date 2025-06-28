@@ -5,11 +5,11 @@ const email = document.getElementById("email").value;
 
 signUpForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (myname.trim() === "" && date.trim() === "" && email.trim() ==="") {
+  if (myname.trim() === "" || date.trim() === "" || email.trim() ==="") {
     return alert("All field required");
-  } else {
+  } 
     
-    userData = {
+  const userData = {
       myname,
       date,
       email,
@@ -17,7 +17,7 @@ signUpForm.addEventListener("submit", function (e) {
     
     localStorage.setItem("users", JSON.stringify(userData));
     alert("sign up successfully");
-  }
+  
   setTimeout(() => {
     window.location.href = "signin.html";
   }, 1500);
