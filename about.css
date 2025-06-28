@@ -128,9 +128,6 @@ footer {
 .hero .left {
   width: 50%;
 }
-.hero .left y {
-
-}
 .hero .right {
   width: 50%;
 }
@@ -199,6 +196,7 @@ h2 {
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .audienceList {
   font-size: 20px;
