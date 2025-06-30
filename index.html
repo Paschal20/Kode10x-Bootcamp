@@ -37,35 +37,48 @@
         </svg>
       </div>
       <!-- Side Navigation Bar for Mobile -->
-      <div class="mobile-sidenav" id="mobileSidenav" style="display: none;">
+      <div class="mobile-sidenav" id="mobileSidenav" style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255,255,255,0.98);
+        z-index: 9999;
+      ">
         <ul class="sidenav">
           <li class="close-btn" onclick="closeSidenav()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="32px"
-          viewBox="0 -960 960 960"
-          width="32px"
-          fill="#1f1f1f"
-        >
-          <path
-            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-          />
-        </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="32px"
+              viewBox="0 -960 960 960"
+              width="32px"
+              fill="#1f1f1f"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
           </li>
           <li><a href="#home" onclick="closeSidenav()">Home</a></li>
           <li><a href="./about.html" onclick="closeSidenav()">About Us</a></li>
           <li><a href="./courses.html" onclick="closeSidenav()">Courses</a></li>
-          <li><a href="https://www.youtube.com/" onclick="closeSidenav()">Contact</a></li>
+          <li>
+            <a href="https://www.youtube.com/" onclick="closeSidenav()"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
       <script>
         // Open sidenav when menu icon is clicked
-        document.querySelector('.signin-container svg').onclick = function() {
-          document.getElementById('mobileSidenav').style.display = 'block';
+        document.querySelector(".signin-container svg").onclick = function () {
+          document.getElementById("mobileSidenav").style.display = "block";
         };
         // Close sidenav function
         function closeSidenav() {
-          document.getElementById('mobileSidenav').style.display = 'none';
+          document.getElementById("mobileSidenav").style.display = "none";
         }
       </script>
     </header>
