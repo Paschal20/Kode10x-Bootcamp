@@ -1,30 +1,30 @@
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   width: 100%;
-  height: 98vh;
+  min-height: 100vh;
   display: flex;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
-.left {
-  width: 50%;
-  height: 100%;
-}
+.left,
 .right {
   width: 50%;
-  height: 100%;
+  height: 100vh;
 }
+
 .right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .logo {
   margin-top: 10px;
   font-size: 1.3rem;
@@ -44,8 +44,8 @@ body {
 
 .innerLeft h1 {
   font-size: 25px;
-  margin-bottom: 8px;
-  align-self: left;
+  margin-bottom: 20px;
+  align-self: flex-start;
 }
 .secondHeader {
   color: gray;
@@ -64,7 +64,7 @@ body {
 }
 
 .innerleft2 {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .inputHolder input {
@@ -83,6 +83,7 @@ body {
   align-items: center;
   border-radius: 5px;
   width: 400px;
+  max-width: 90vw;
   justify-content: space-between;
   height: 40px;
   margin-bottom: 10px;
@@ -104,6 +105,7 @@ body {
   align-items: center;
   border-radius: 5px;
   width: 400px;
+  max-width: 90vw;
   justify-content: space-between;
   height: 40px;
   outline: none;
@@ -167,4 +169,72 @@ body {
 }
 .logoanchor {
   text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .inputHolder,
+  .emailbox {
+    width: 320px;
+    max-width: 95vw;
+  }
+  .left,
+  .right {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+  }
+  .right img {
+    height: 250px;
+    min-height: 200px;
+    object-fit: cover;
+  }
+  .inputHolder,
+  .emailbox {
+    width: 90vw;
+    max-width: 100%;
+  }
+  .innerleft2 {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+    margin-left: 2%;
+  }
+  .innerLeft h1 {
+    font-size: 18px;
+  }
+  .inputHolder,
+  .emailbox {
+    width: 98vw;
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .signup,
+  .googleButton {
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .right img {
+    height: 150px;
+    min-height: 100px;
+  }
+  .innerleft2 {
+    padding-top: 20px;
+  }
 }

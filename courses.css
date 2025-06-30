@@ -1,0 +1,167 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+html {
+  font-size: 20px;
+}
+p {
+  line-height: 1.4;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a span {
+  color: #323fa6;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  font-family: Roboto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 60%;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: black;
+  margin-left: 3%;
+}
+.search {
+  height: 25px;
+  width: 400px;
+  border-radius: 20px;
+  border: solid;
+  border-width: 0.1px;
+  border-color: gray;
+  padding-left: 20px;
+}
+.inputHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 460px;
+}
+.left {
+  width: 15%;
+  height: calc(100vh - 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 40px;
+}
+.leftContent {
+  display: flex;
+  align-items: center;
+}
+.leftContent a {
+  color: #181818;
+}
+.leftContent svg {
+  margin-right: 20px;
+}
+
+.profileHolder {
+  display: flex;
+  align-items: center;
+}
+.profileHolder svg {
+  margin-right: 10px;
+}
+.profileHolder a {
+  color: #181818;
+}
+.nameAndEmail {
+  font-size: 10px;
+}
+.right {
+  margin-top: 40px;
+  width: 85%;
+  height: calc(100vh - 130px);
+}
+.cards {
+  display: flex;
+}
+.card {
+  width: 25%;
+  height: 200px;
+  margin-right: 20px;
+}
+.cardImage {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.mainPage {
+  display: flex;
+}
+.text {
+  margin-bottom: 10px;
+}
+.cardText {
+  display: flex;
+  margin-bottom: 10px;
+}
+.nameAndTitle {
+  font-size: 10px;
+}
+.cardText svg {
+  margin-right: 10px;
+}
+.cardholder {
+  margin-bottom: 20px;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 10px;
+}
+
+.Watch {
+  font-size: 12px;
+  background-color: #323fa6;
+  color: white;
+  padding: 6px;
+  border-radius: 15px;
+  border-style: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 15px;
+}
+.download {
+  font-size: 12px;
+  background: white;
+  border: solid;
+  border-color: #323fa6;
+  border-width: 0.2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 15px;
+  color: gray;
+}
+.downloadtag {
+  text-decoration: none;
+}

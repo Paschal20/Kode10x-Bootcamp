@@ -19,7 +19,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="./about.html">About Us</a></li>
-        <li><a href="https://www.youtube.com/">Courses</a></li>
+        <li><a href="./courses.html">Courses</a></li>
         <li><a href="https://www.youtube.com/">Contact</a></li>
       </ul>
       <div class="signin-container">
@@ -36,6 +36,38 @@
           />
         </svg>
       </div>
+      <!-- Side Navigation Bar for Mobile -->
+      <div class="mobile-sidenav" id="mobileSidenav" style="display: none;">
+        <ul class="sidenav">
+          <li class="close-btn" onclick="closeSidenav()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="32px"
+          viewBox="0 -960 960 960"
+          width="32px"
+          fill="#1f1f1f"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+          </li>
+          <li><a href="#home" onclick="closeSidenav()">Home</a></li>
+          <li><a href="./about.html" onclick="closeSidenav()">About Us</a></li>
+          <li><a href="./courses.html" onclick="closeSidenav()">Courses</a></li>
+          <li><a href="https://www.youtube.com/" onclick="closeSidenav()">Contact</a></li>
+        </ul>
+      </div>
+      <script>
+        // Open sidenav when menu icon is clicked
+        document.querySelector('.signin-container svg').onclick = function() {
+          document.getElementById('mobileSidenav').style.display = 'block';
+        };
+        // Close sidenav function
+        function closeSidenav() {
+          document.getElementById('mobileSidenav').style.display = 'none';
+        }
+      </script>
     </header>
     <div class="heroHolder">
       <div class="hero">
@@ -166,14 +198,20 @@
           <p><a href="./signupPage.html">Join Us</a></p>
         </div>
         <div class="profile">
-          <img src="./Images/female profile pic.png" alt="" />
-          <h3>Mary Joel</h3>
+          <img
+            src="./Images/Dark male gemini.jpg"
+            alt="Dark male picture.jpg"
+          />
+          <h3>Joel Peter</h3>
           <p>I never knew I had an artist in me.</p>
           <p><a href="./signupPage.html">Join Us</a></p>
         </div>
         <div class="profile">
-          <img src="./Images/female profile pic.png" alt="" />
-          <h3>Dinma Joy</h3>
+          <img
+            src="./Images/Dark female gemini.jpg"
+            alt="Dark female picture.jpg"
+          />
+          <h3>Mia Johnson</h3>
           <p>I never knew I had an artist in me.</p>
           <p><a href="./signupPage.html">Join Us</a></p>
         </div>
@@ -186,9 +224,7 @@
       <div>
         <input class="input2" type="Email" placeholder="Email Address" />
       </div>
-      <div>
-        <input class="input3" type="text" class="chat" placeholder=" " />
-      </div>
+
       <a href="./signin.html"><button class="signin">Submit</button></a>
     </div>
     <footer>

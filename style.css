@@ -23,7 +23,7 @@ body {
 }
 header {
   width: 100%;
-
+  padding: 0 5%;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,13 @@ header ul li a {
 header svg {
   display: none;
 }
+.sidenav {
+  right: 0%;
 
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
 .hero {
   width: 95%;
   height: calc(100vh - 90px);
@@ -311,25 +317,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
-  header svg {
-    display: flex;
-  }
 
-  header ul {
-    display: none;
-  }
-}
+/* Responsive Styles */
 @media (max-width: 1200px) {
   .hero {
     width: 100%;
     flex-direction: column-reverse;
-    height: auto;
+    min-height: auto;
+    gap: 0;
   }
   .heroHolder {
-    width: 95%;
-    border-radius: 0px, 10px;
-    background-image: url("./Images/Hero\ Image.jpg");
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-image: url("./Images/Hero Image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -340,27 +340,29 @@ footer {
     display: none;
   }
   .hero .left {
-    padding-top: 200px;
-    height: 65vh;
-
+    padding-top: 100px;
+    padding-bottom: 40px;
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.466);
   }
-  .hero h1 {
-    color: white;
-  }
+  .hero h1,
   .hero p {
     color: white;
+    width: 90%;
+    margin: 0 auto;
   }
   .targetAudience {
     width: 100%;
     flex-direction: column;
+    gap: 0;
   }
   .targetAudienceHolder {
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
-    background-image: url("./Images/Target\ Audience\ Image.jpg");
+    background-image: url("./Images/Target Audience Image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .targetAudience .right {
     display: none;
@@ -369,53 +371,135 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.527);
     border-radius: 10px;
-  }
-  .targetAudience .left h2 {
     color: white;
+    padding: 2rem 1rem;
   }
+  .targetAudience .left h2,
   .targetAudience .left ul {
     color: white;
   }
-
-  .audienceTitle {
-    align-self: center;
-  }
+  .audienceTitle,
   .audienceList {
     align-self: center;
   }
 }
-@media (max-width: 340px) {
+@media (max-width: 900px) {
+  .keyFeatures .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .keyFeatures .cards .card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    min-width: 160px;
+  }
+  .cardHolder {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 5%;
+  }
+  header svg {
+    display: flex;
+  }
+  header ul {
+    display: none;
+  }
+  .logo {
+    margin: 0 0 10px 0;
+  }
+  .signin-container {
+    margin: 10px 0 0 0;
+  }
+  .hero {
+    min-height: 60vh;
+    padding: 2rem 0;
+  }
+  .keyFeatures .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .keyFeatures .cards .card {
+    width: 90%;
+    max-width: 400px;
+  }
+  .targetAudience {
+    flex-direction: column;
+    gap: 0;
+  }
+  .targetAudience .left {
+    width: 100%;
+    padding: 1rem;
+  }
+  .profile {
+    width: 90%;
+    max-width: 300px;
+  }
+  .cardHolder {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  header svg {
+    display: flex;
+  }
+  header ul {
+    display: none;
+  }
+  .hero {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .prompt p {
+    max-width: 50%;
+  }
+  .prompt input {
+    width: 100%;
+    max-width: 100%;
+  }
+  footer {
+    font-size: 0.9rem;
+    height: 60px;
+  }
+}
+@media (max-width: 400px) {
   .hero {
     min-height: 120vh;
   }
   .hero .left {
     margin-top: -50%;
-  }
-}
-@media (max-width: 540px) {
-  .keyFeatures .cards {
-    margin-left: 50%;
-  }
-}
-@media (max-width: 807px) {
-  body {
-    width: 100%;
-  }
-  .hero .left {
     padding-top: 30px;
   }
-  .hero .left p {
-    margin-bottom: 15px;
+  .profile {
+    width: 100%;
+    max-width: 100%;
   }
-  .hero p,
+}
+@media (max-width: 300px) {
   .hero h1 {
-    width: 90%;
+    font-size: 1.5rem;
   }
-  .keyFeatures .cards {
-    margin-left: 40%;
+  .hero p {
+    font-size: 0.9rem;
   }
-  .keyFeatures p,
-  .keyFeatures h2 {
-    width: 90%;
+  .keyFeatures .cards .card h3 {
+    font-size: 0.8rem;
+  }
+  .keyFeatures .cards .card p {
+    font-size: 0.7rem;
   }
 }
