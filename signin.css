@@ -58,13 +58,13 @@ body {
   padding-left: 10px;
   background-color: white;
   z-index: 2;
-  margin-bottom: -10px;
-  width: 30px;
+  margin-bottom: -8px;
+  width: 40px;
   padding-left: 10px;
 }
 
 .innerleft2 {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .inputHolder input {
@@ -178,9 +178,11 @@ body {
     width: 320px;
     max-width: 95vw;
   }
-  .left,
+  .left {
+    width: 60%;
+  }
   .right {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -189,24 +191,22 @@ body {
     flex-direction: column;
     min-height: 100vh;
   }
-  .left,
-  .right {
+  .left {
     width: 100%;
     height: auto;
     min-height: 50vh;
   }
-  .right img {
-    height: 250px;
-    min-height: 200px;
-    object-fit: cover;
+  .right {
+    display: none;
   }
+
   .inputHolder,
   .emailbox {
     width: 90vw;
     max-width: 100%;
   }
   .innerleft2 {
-    padding-top: 40px;
+    padding-top: 100px;
   }
 }
 
@@ -235,6 +235,6 @@ body {
     min-height: 100px;
   }
   .innerleft2 {
-    padding-top: 20px;
+    padding-top: 100px;
   }
 }
