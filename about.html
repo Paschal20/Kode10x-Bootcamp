@@ -14,16 +14,19 @@
   </head>
   <body>
     <header>
-      <p class="logo">EduBr<span>idge</span></p>
+      <p class="logo">
+        <a href="./index.html">EduBr<span>idge</span></a>
+      </p>
 
       <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
+        <li>About Us</li>
         <li><a href="./courses.html">Courses</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
       <div class="signin-container">
-        <a href="./signin.html"> <button class="signin">Sign In</button></a>
+        <a href="./signin.html"><button class="signin">Sign In</button></a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24px"
@@ -36,7 +39,22 @@
           />
         </svg>
       </div>
-      <div class="mobile-sidenav" id="mobileSidenav">
+
+      <!-- Mobile Sidenav -->
+      <div
+        class="mobile-sidenav"
+        id="mobileSidenav"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.404);
+          z-index: 9999;
+        "
+      >
         <ul class="sidenav">
           <li class="close-btn" onclick="closeSidenav()">
             <svg
@@ -54,26 +72,21 @@
           <li><a href="./index.html" onclick="closeSidenav()">Home</a></li>
           <li><a href="./about.html" onclick="closeSidenav()">About Us</a></li>
           <li><a href="./courses.html" onclick="closeSidenav()">Courses</a></li>
-          <li>
-            <a href="https://www.youtube.com/" onclick="closeSidenav()"
-              >Contact</a
-            >
-          </li>
+          <li><a href="#contact" onclick="closeSidenav()">Contact</a></li>
         </ul>
       </div>
+
       <script>
-        // Open sidenav when menu icon is clicked
         document.querySelector(".signin-container svg").onclick = function () {
           document.getElementById("mobileSidenav").style.display = "block";
         };
-        // Close sidenav function
         function closeSidenav() {
           document.getElementById("mobileSidenav").style.display = "none";
         }
       </script>
     </header>
 
-    <div class="heroHolder">
+    <section class="heroHolder">
       <div class="hero">
         <div class="left">
           <div class="left4">
@@ -92,12 +105,15 @@
           <img src="./Images/Hero Image.jpg" alt="Girl Learning" />
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="targetAudienceHolder">
+    <section class="targetAudienceHolder">
       <div class="targetAudience">
         <div class="right">
-          <img src="./belowAudience.jpg" alt="A group of people learning" />
+          <img
+            src="./Images/jss-photography-bnq9D59TPVA-unsplash.jpg"
+            alt="A group of people learning"
+          />
         </div>
         <div class="left">
           <div class="left2">
@@ -112,8 +128,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="heroHolder">
+    </section>
+
+    <section class="heroHolder">
       <div class="hero">
         <div class="left">
           <div class="left3">
@@ -125,27 +142,28 @@
             </p>
           </div>
         </div>
-        <div class="right">
+        <div class="right" id="bottomRightImage">
           <img
             src="./Images/creab-thepolymath-jDXMQf3LPX8-unsplash.jpg"
             alt="Boy Leaning"
           />
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="prompt">
+    <section class="prompt">
       <h2>Start Learning</h2>
-      <p>Email: EduBridge@gmail.com | Phone: +1 (123) 456-7890</p>
+      <p>Email: EduBridge@gmail.com | Phone: +234 (080) 456-7890</p>
       <div><input class="input1" type="text" placeholder="Your Name" /></div>
       <div>
         <input class="input2" type="Email" placeholder="Email Address" />
       </div>
 
       <a href="./signin.html"><button class="signin">Submit</button></a>
-    </div>
+    </section>
+
     <footer>
-      <p>© 2024 Navis. All rights reserved.</p>
+      <p>© 2025 EduBridge. All rights reserved.</p>
     </footer>
   </body>
 </html>
