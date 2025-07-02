@@ -74,7 +74,12 @@
             </svg>
           </div>
 
-          <button type="button" class="signup" id="signup" onclick="signUp()">
+          <button
+            type="button"
+            class="signup"
+            id="signupBtn"
+            onclick="signUp()"
+          >
             Sign Up
           </button>
 
@@ -127,48 +132,57 @@
       <img src="./Images/element5-digital-jCIMcOpFHig-unsplash.jpg" alt="" />
     </div>
     <script>
-      function signUp() {
-        const name = document.getElementById("myname").value.trim();
-        const dob = document.getElementById("date").value;
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("signupBtn")
+          .addEventListener("click", function () {
+            const name = document.getElementById("myname").value.trim();
+            const dob = document.getElementById("date").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
 
-        // Simple email regex for validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (!name) {
-          alert("Please enter your name.");
-          return;
-        }
-        if (!dob) {
-          alert("Please select your date of birth.");
-          return;
-        }
-        if (!email || !emailRegex.test(email)) {
-          alert("Please enter a valid email address.");
-          return;
-        }
-        if (!password) {
-          alert("Please enter a password.");
-          return;
-        }
+            if (!name) {
+              alert("Please enter your name.");
+              return;
+            }
+            if (!dob) {
+              alert("Please select your date of birth.");
+              return;
+            }
+            if (!email || !emailRegex.test(email)) {
+              alert("Please enter a valid email address.");
+              return;
+            }
+            if (!password) {
+              alert("Please enter a password.");
+              return;
+            }
 
-        if (localStorage.getItem(email)) {
-          alert("User already exists!");
-        } else {
-          // Store user data as JSON string for extensibility
-          const userData = {
-            name: name,
-            dob: dob,
-            password: password,
-          };
-          localStorage.setItem(email, JSON.stringify(userData));
-          alert("User registered successfully!");
-          setTimeout(() => {
-            window.location.href = "signin.html";
-          }, 1500);
-        }
-      }
+            try {
+              if (localStorage.getItem(email)) {
+                alert("User already exists!");
+              } else {
+                const userData = {
+                  name: name,
+                  dob: dob,
+                  password: password,
+                };
+                localStorage.setItem(email, JSON.stringify(userData));
+                alert("User registered successfully!");
+                setTimeout(() => {
+                  window.location.href = "signin.html";
+                }, 1500);
+              }
+            } catch (e) {
+              console.error("LocalStorage Error:", e);
+              alert(
+                "Something went wrong saving your data. Try a different browser."
+              );
+            }
+          });
+      });
     </script>
   </body>
 </html>
